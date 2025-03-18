@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama - Shazika Shafa Humaira</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="Bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <main>
+        <section class="hero">
+            <!-- Tombol Toggle Dark Mode -->
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+                <i class="fas fa-moon"></i> <!-- Ikon bulan untuk mode gelap -->
+            </button>
+
+            <img src="Zee.jpg" alt="Foto Profil" class="profile-img">
+            <h1>Hi, Saya Shazika Shafa Humaira</h1>
+            <p>Saya adalah mahasiswa Teknik Informatika di Universitas Muhammadiyah Surakarta yang memiliki minat kuat dalam pengembangan web. Saat ini, saya sedang mempelajari pemrograman web dan membangun proyek pertama saya untuk menerapkan apa yang telah saya pelajari di kelas.</p>
+            
+            <!-- Tombol Portofolio dan Contact -->
+            <div class="hero-nav">
+                <a href="portfolio.html" class="hero-nav-button">Portofolio</a>
+                <a href="contact.html" class="hero-nav-button">Kontak</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/shazikashafa?igsh=cDl6dnhvdjU2bTBh&utm_source=qr" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@onyoyyy?_t=ZS-8ulPWQAVHK4&_r=1" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shazikashafa.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const icon = toggleButton.querySelector('i');
+
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>

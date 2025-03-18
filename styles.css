@@ -1,0 +1,331 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f7f3f5f3, #b8358c);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.267);
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f3edf1;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  background: rgba(228, 222, 222, 0.24); /* Latar belakang transparan */
+  backdrop-filter: blur(10px); /* Efek blur */
+  border-radius: 15px; /* Sudut melengkung */
+  padding: 2rem; /* Ruang di dalam elemen */
+  max-width: 1000px; /* Lebar maksimum */
+  width: 100%; /* Lebar relatif */
+  margin: 2rem auto; /* Posisi di tengah */
+  text-align: center; /* Teks rata tengah */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Bayangan */
+  position: relative; /* Diperlukan untuk posisi absolut tombol toggle */
+}
+
+/* Gaya untuk tombol Portofolio dan Contact */
+.hero-nav-button {
+  background-color: transparent; /* Background transparan */
+  color: #721966; /* Warna teks */
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #721966; /* Border dengan warna yang sama seperti teks */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Efek transisi untuk hover */
+  font-size: 1rem; /* Ukuran font */
+}
+
+.hero-nav-button:hover {
+  background-color: #721966; /* Warna background saat dihover */
+  color: #fff; /* Warna teks saat dihover */
+  border-color: #721966; /* Warna border saat dihover */
+}
+
+.profile-img {
+  width: 300px; /* Lebar gambar */
+  height: 200px; /* Tinggi gambar */
+  border-radius: 15px; /* Sudut tumpul untuk bingkai kotak */
+  border: 4px solid #4e0a34; 
+  margin-bottom: 0.5rem; /* Jarak bawah */
+  object-fit: cover; /* Gambar menyesuaikan kotak */
+}
+
+.hero h1 {
+  font-size: 2rem; /* Ukuran judul */
+  margin-bottom: 0.5rem; /* Jarak bawah */
+  color: #721966; /* Warna judul */
+}
+
+.hero p {
+  font-size: 1rem; /* Ukuran teks */
+  color: #e0e0e0; /* Warna teks */
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fcfbf9;
+  transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ebe9e1;
+  text-align: left;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #e0e0e0;
+}
+
+.contact form button {
+  background-color: #faf9f5;
+  color: #333;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: #b4b09d;
+}
+
+/* Portfolio Section */
+.portfolio {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid #f7f6f4;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+  border-color: #776161;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #641e41;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #f5eff7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  color: #ffdd57;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .hero,
+body.dark-mode .portfolio,
+body.dark-mode .contact {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-card {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .social-icon {
+  color: #ffffff;
+}
+
+body.dark-mode .social-icon:hover {
+  color: #ffdd57;
+}
+
+body.dark-mode .contact form input,
+body.dark-mode .contact form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+body.dark-mode .contact form input::placeholder,
+body.dark-mode .contact form textarea::placeholder {
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact form button {
+  background-color: #ffdd57;
+  color: #333;
+}
+
+body.dark-mode .contact form button:hover {
+  background-color: #ffcc00;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Pastikan video berada di belakang konten */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1; /* Pastikan konten berada di atas video */
+}
